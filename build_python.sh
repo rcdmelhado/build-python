@@ -28,7 +28,7 @@ tar xvf Python-$version.tgz
 cd Python-$version
 
 ./configure --enable-optimizations --with-ensurepip=install
-make -j 8
+make -j $(nproc)
 sudo make altinstall
 
 cd ..
